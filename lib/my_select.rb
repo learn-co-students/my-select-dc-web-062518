@@ -1,8 +1,9 @@
 def my_select(collection)
   arr = []
   collection.each do |c|
-  arr << yield(c)
-        
+      if yield(c)
+        arr << c 
+      end
   end
   arr
 end
